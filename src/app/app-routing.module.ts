@@ -14,12 +14,12 @@ const routes: Routes = [
   {path:'home' , component:HomeComponent},
   {path:'search/:searchTerm' , component:HomeComponent},
   {path:'tag/:tagName' , component:HomeComponent},
-  {path:'details/:id' , component:FoodDetailsComponent , canActivate:[AuthGuard]},
-  {path:'details/:id/:query' , component:FoodDetailsComponent, canActivate:[AuthGuard]},
-  {path:'cart' , component:CartComponent , canActivate:[AuthGuard]},
+  {path:'details/:id' , component:FoodDetailsComponent /*, canActivate:[AuthGuard]*/},
+  {path:'details/:id/:query' , component:FoodDetailsComponent/*, canActivate:[AuthGuard]*/},
+  {path:'cart' , component:CartComponent /*, canActivate:[AuthGuard]*/},
   {path:'login' , component:LoginComponent},
   {path:'register' , component:RegisterComponent},
-  {path:'**' , component: NotFoundComponent}
+  {path:'**' , component: NotFoundComponent }
 ];
 
 @NgModule({
